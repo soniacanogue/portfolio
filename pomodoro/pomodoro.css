@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #2c2cff, #1800ad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.pomodoro-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.pomodoro-glass {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 40px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* PANEL LEFT */
+.panel-left input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px 0 20px;
+}
+
+.times {
+  display: flex;
+  gap: 15px;
+}
+
+.times input {
+  width: 80px;
+  text-align: center;
+}
+
+.info {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* PANEL RIGHT */
+.panel-right {
+  text-align: center;
+}
+
+.timer-circle {
+  width: 260px;
+  height: 260px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mode {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.timer-circle h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.controls button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pomodoro-glass {
+    grid-template-columns: 1fr;
+  }
+}
